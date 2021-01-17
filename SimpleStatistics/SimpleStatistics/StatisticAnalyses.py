@@ -8,13 +8,9 @@ class StatisticAnalyses(object):
         ordenedList = statisticCalculator.OrdenateValues(values)
         rol = statisticCalculator.OrdenateValues(values)
         standartDeviation = statisticCalculator.GetStandartDeviation(values)
+        median = statisticCalculator.GetMedian(values)
 
-        print("\nAverage:")
-        print(str(average) + "\n")
-        print("Rol:")
-        print(ListPrinter().GenerateMessage(rol, ", ") + "\n")
-        print("Standart Deviation:")
-        print(str(standartDeviation) + "\n")
-
-
-
+        print("Average: " + str(average) + "\n")
+        print("Rol: " + ListPrinter().GenerateMessage(rol, ", ") + "\n")
+        print("Standart Deviation: " + str(standartDeviation) + "\n")
+        print("Median: " + str(median) + "\n")
