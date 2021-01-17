@@ -40,3 +40,16 @@ class StatisticCalculator(object):
         
          variance = self.CalculateArritmeticAvg(deviations)
          return math.sqrt(variance)
+
+     def GetMedian(self, values):
+         ordenatedValues = self.OrdenateValues(values)
+         length = len(ordenatedValues)
+          
+         if length % 2 == 0:
+           middle = int(length/2)
+           return (ordenatedValues[middle - 1] + ordenatedValues[middle]) / 2
+         else:
+           return ordenatedValues[int((length - 1)/2)]
+
+            
+          
